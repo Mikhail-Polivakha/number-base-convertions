@@ -97,7 +97,7 @@ public class NumbersBaseConverter {
             dividerResult /= resultNumberBase;
             resultNumber.append(remainer);
         }
-        return resultNumber.append(dividerResult).reverse().toString();
+        return resultNumber.append(getCharacterFromNumber(dividerResult, resultNumberBase)).reverse().toString();
     }
 
     private static char getCharacterFromNumber(long number, int radix) {

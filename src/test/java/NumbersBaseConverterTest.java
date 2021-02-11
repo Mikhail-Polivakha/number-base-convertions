@@ -67,6 +67,7 @@ public class NumbersBaseConverterTest {
 
     @Nested
     class convertNumberFromOneBaseToAnother {
+
         @Test
         void first() {
             final String result = NumbersBaseConverter.convertNumberFromOneBaseToAnother("10000", 2, 10);
@@ -94,6 +95,12 @@ public class NumbersBaseConverterTest {
         void fifth() {
             final String result = NumbersBaseConverter.convertNumberFromOneBaseToAnother("123B", 13, 8);
             Assertions.assertEquals(5031, Integer.valueOf(result));
+        }
+
+        @Test
+        void sixth() {
+            final String result = NumbersBaseConverter.convertNumberFromOneBaseToAnother("44784", 10, 16);
+            Assertions.assertEquals("AEF0", result);
         }
     }
 
